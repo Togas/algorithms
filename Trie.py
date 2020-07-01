@@ -7,8 +7,17 @@ class Trie:
   def insert(self, word):
     current=self.trie
     for char in word:
-      if char not in dict:
+      if char not in current:
         current[char]={}
       current=current[char]
     current["*"]=word
-    
+  
+  def inTrie(self, word):
+    current=self.trie
+    for char in word:
+      if char not in current:
+        return False
+      current=current[char]
+    if "*" in current:
+      return True
+    return False
