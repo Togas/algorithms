@@ -1,3 +1,4 @@
+#sieve of eratosthenes calculates prime numbers efficiently
 def getPrimes(n):
     dp=[False for i in range(n+1)]
     for i in range(2, n):
@@ -10,5 +11,3 @@ def getPrimes(n):
         if not dp[i]:
             result.append(i)
     return result
-
-print(getPrimes(100)) 
